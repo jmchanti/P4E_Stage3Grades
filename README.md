@@ -7,7 +7,7 @@ The purpose of this assignment is to allow you to confirm you have Github Classr
 
 1. Open `payCalculator.py`
 1. https://canvas.instructure.com/courses/3650963/assignments/25666007?module_item_id=55313386
-3. Note: complete the code inside the calculatePay section.  Each line should be indented between the comments in that file.  For example
+3. Note: complete the code inside the calculateGrade section.  Each line should be indented between the comments in that file.  For example
 
 calculateGrade():
     all of the
