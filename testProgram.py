@@ -33,7 +33,7 @@ def test_gradeCalculator_prints_Bad_score_with_high_score(capfd, monkeypatch):
     assert out == expected
  
 def test_gradeCalculator_prints_A_score_with_above_9(capfd, monkeypatch):
-    score = randint(90, 100)/100
+    score = randint(900, 1000)/1000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
@@ -43,7 +43,7 @@ def test_gradeCalculator_prints_A_score_with_above_9(capfd, monkeypatch):
     assert out == expected
  
 def test_gradeCalculator_prints_B_score_with_above_8(capfd, monkeypatch):
-    score = randint(80, 90)/100-.00001
+    score = randint(8000, 8999)/10000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
@@ -52,7 +52,7 @@ def test_gradeCalculator_prints_B_score_with_above_8(capfd, monkeypatch):
     expected = 'Calculating Grade\n{}\n'.format('B')
     assert out == expected
 def test_gradeCalculator_prints_C_score_with_above_7(capfd, monkeypatch):
-    score = randint(70, 80)/100-.00001
+    score = randint(7000, 7999)/1000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
@@ -61,7 +61,7 @@ def test_gradeCalculator_prints_C_score_with_above_7(capfd, monkeypatch):
     expected = 'Calculating Grade\n{}\n'.format('C')
     assert out == expected
 def test_gradeCalculator_prints_D_score_with_above_6(capfd, monkeypatch):
-    score = randint(60, 70)/100-.00001
+    score = randint(6000, 6999)/10000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
@@ -70,7 +70,7 @@ def test_gradeCalculator_prints_D_score_with_above_6(capfd, monkeypatch):
     expected = 'Calculating Grade\n{}\n'.format('D')
     assert out == expected
 def test_gradeCalculator_prints_F_score_with_below_6(capfd, monkeypatch):
-    score = randint(0, 60)/100-.00001
+    score = randint(0, 5999)/1000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
