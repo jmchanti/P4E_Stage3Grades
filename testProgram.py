@@ -52,7 +52,7 @@ def test_gradeCalculator_prints_B_score_with_above_8(capfd, monkeypatch):
     expected = 'Calculating Grade\n{}\n'.format('B')
     assert out == expected
 def test_gradeCalculator_prints_C_score_with_above_7(capfd, monkeypatch):
-    score = randint(7000, 7999)/1000
+    score = randint(7000, 7999)/10000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
@@ -70,7 +70,7 @@ def test_gradeCalculator_prints_D_score_with_above_6(capfd, monkeypatch):
     expected = 'Calculating Grade\n{}\n'.format('D')
     assert out == expected
 def test_gradeCalculator_prints_F_score_with_below_6(capfd, monkeypatch):
-    score = randint(0, 5999)/1000
+    score = randint(0, 5999)/10000
     input = [score]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     gradeCalculator.calculateGrade()
