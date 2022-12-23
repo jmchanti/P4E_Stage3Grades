@@ -1,19 +1,44 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6637432&assignment_repo_type=AssignmentRepo)
-# Calculate Pay using variables
+# Assignment
+Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print the error message: `Bad score`. 
 
-The purpose of this assignment is to allow you to confirm you have Github Classroom set up properly and you're able to submit assignments.
+If the score is between 0.0 and 1.0, print a grade using the following table:
 
-## Steps for completion
 
-1. Open `payCalculator.py`
-1. https://canvas.instructure.com/courses/3650963/assignments/25666007?module_item_id=55313386
-3. Note: complete the code inside the calculateGrade section.  Each line should be indented between the comments in that file.  For example
+```
+ Score   Grade
+>= 0.9     A
+>= 0.8     B
+>= 0.7     C
+>= 0.6     D
+ < 0.6     F
+```
 
-calculateGrade():
-    all of the
-    code you are writing
-    should be indented 4 spaces
-    in between the comments in that file
+## Starting Code
+```python
+def calculateGrade():
+    print("Calculating Grade")
 
-1. When ready to submit, press the sync button in the assignments tab.
-1.  Hint: the desired output needs to be printed as described in the assignment, if it is not, the tests will fail.
+    hrs = float(input("Enter score:"))
+
+if __name__ == "__main__":
+    calculateGrade()
+```
+
+## Desired Output
+```bash
+Enter score: 0.95
+A
+Enter score: perfect
+Bad score
+Enter score: 10.0
+Bad score
+Enter score: 0.75
+C
+Enter score: 0.5
+F
+```
+
+## Testing
+Run the program repeatedly as shown above to test the various different values for input.
+
+When you feel like it is complete, run Pytest. 8/8 tests should pass. 

@@ -7,8 +7,8 @@ def calculateGrade():
 
     # end assignment
 
-## if you want to test locally before you try to sync
-## uncomment calculateGrade() and run > python calculateGrade.py
-## ***IMPORTANT*** please recomment before you submit/sync your assignment.
-## OR YOUR TEST WILL NOT RUN
-## calculateGrade()
+## If you want to test locally before you try to sync
+## Run > python calculateGrade.py
+
+if __name__ == "__main__":
+    calculateGrade()
